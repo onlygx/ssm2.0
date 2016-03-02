@@ -195,6 +195,19 @@
             <version>1.9</version>
         </dependency>
 
+        <!-- Mysql 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <!-- Mysql sql解析工具 -->
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>0.9.4</version>
+        </dependency>
+
 
     </dependencies>
     <build>

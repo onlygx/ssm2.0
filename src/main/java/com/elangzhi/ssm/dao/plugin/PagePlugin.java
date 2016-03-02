@@ -38,10 +38,7 @@ import org.apache.ibatis.type.TypeHandlerRegistry;
  * 
 * 类名称：PagePlugin.java
 * 类描述： 
-* @author FH
-* 作者单位： 
-* 联系方式：qq313596790
-* 创建时间：2014年7月1日
+* @author Gx
 * @version 1.0
  */
 @Intercepts({@Signature(type=StatementHandler.class,method="prepare",args={Connection.class})})

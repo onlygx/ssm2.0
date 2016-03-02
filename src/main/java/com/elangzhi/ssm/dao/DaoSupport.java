@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository("daoSupport")
 public class DaoSupport implements DAO {
 
-	@Resource(name = "sqlSessionTemplate")
+	@Resource
 	private SqlSessionTemplate sqlSessionTemplate;
 	
 	/**
