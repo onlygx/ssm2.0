@@ -4,10 +4,7 @@ import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
-
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by GaoXiang on 2016/3/2 0002.

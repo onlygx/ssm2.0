@@ -10,17 +10,11 @@
 
 	<typeAliases>
 		<!-- 分页 -->
-		<typeAlias type="com.elangzhi.ssm.dao.plugin.PageData" alias="pd"/>
-		<typeAlias type="com.elangzhi.ssm.model.base.Page" alias="Page"/>
+		<typeAlias type="com.elangzhi.ssm.tools.PageData" alias="pd"/>
 	</typeAliases>
 
 	<!-- MyBatis分页插件 -->
 	<plugins>
-		<!-- 自写MyBatis分页插件 -->
-		<!--<plugin interceptor="com.elangzhi.ssm.dao.plugin.PagePlugin">
-			<property name="dialect" value="mysql"/>
-			<property name="pageSqlId" value=".*listPage.*"/>
-		</plugin>-->
 
 		<!-- com.github.pagehelper为PageHelper类所在包名 -->
 		<plugin interceptor="com.github.pagehelper.PageHelper">
