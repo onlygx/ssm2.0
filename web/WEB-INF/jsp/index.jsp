@@ -11,14 +11,24 @@
 
 <html>
 <head>
-    <title>首页测试</title>
+    <title>框架测试</title>
 </head>
 <body>
-<h2>WEB-INF!</h2>
-
-<h4> 1` ${status}</h4>
-<h4> 2` ${id}</h4>
-<h4> 2` ${pageInfo.toString()}</h4>
+<h2>测试地址</h2>
+<a href="http://localhost/power/login_insert?name=powerTest&url=www.baidu.com">
+    http://localhost/power/login_insert?name=powerTest&url=www.baidu.com
+</a>
+<br>
+<a href="http://localhost/power/login_select?id=13765">http://localhost/power/login_select?id=13765</a>
+<br>
+<a href="http://localhost/power/login_delete?id=11111111111">http://localhost/power/login_delete?id=11111111111</a>
+<br>
+<a href="http://localhost/power/login_list/0/10">http://localhost/power/login_list/0/10</a>
+<br>
+<h2>返回值</h2>
+<h4> 状态： ${status}</h4>
+<h4> 返回值： ${id}</h4>
+<h4> 分页信息： ${pageInfo.toString()}</h4>
 
 <table style="width: 100%;" class="table table-striped table-bordered">
     <tr>

@@ -22,22 +22,4 @@ public class AdminController extends BaseController {
     @Resource
     AccountService accountService;
 
-
-    @RequestMapping(value="/login_test1")
-    public ModelAndView test(@RequestParam("userName") String userName)throws Exception{
-        PageData pd = getPageData();
-        pd.put("userName",userName);
-        pd.put("text", "读取系统名称");
-        pd.put("account", accountService.findByUserName(pd));
-        return new ModelAndView("index",pd);
-    }
-
-    @RequestMapping(value="/login_test2")
-    public ModelAndView test2(HttpServletRequest request)throws Exception{
-        PageData pd = new PageData(request);
-        pd.put("text", "读取系统名称");
-        pd.put("account", accountService.findByUserName(pd));
-        return new ModelAndView("index",pd);
-    }
-
 }
