@@ -1,10 +1,8 @@
 package com.elangzhi.ssm.services;
 
-import com.elangzhi.ssm.dao.DaoSupport;
-import com.elangzhi.ssm.dao.plugin.PageData;
+import com.elangzhi.ssm.dao.LzDao;
 import com.elangzhi.ssm.model.Account;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 
 /**
@@ -12,19 +10,10 @@ import javax.annotation.Resource;
  */
 
 @Service
-public class AccountService {
+public class AccountService extends BaseService<Account> {
 
-    @Resource(name = "daoSupport")
-    private DaoSupport dao;
-
-    /**
-     * 根据用户名查找用户
-     * @param pd
-     * @return
-     */
-    public PageData findByUserName(PageData pd) throws Exception {
-        return (PageData) dao.findForObject("AccountMapper.findByUserName",pd);
-    }
+    @Resource
+    private LzDao lzDao;
 
 
 }

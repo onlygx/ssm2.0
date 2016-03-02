@@ -1,14 +1,12 @@
 package com.elangzhi.ssm.services;
 
 import com.elangzhi.ssm.dao.LzDao;
-import com.elangzhi.ssm.dao.plugin.PageData;
+import com.elangzhi.ssm.tools.PageData;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by GaoXiang on 2015/9/29 0029.

@@ -1,4 +1,4 @@
-package com.elangzhi.ssm.dao.plugin;
+package com.elangzhi.ssm.tools;
 
 import java.util.Collection;
 import java.util.HashMap;

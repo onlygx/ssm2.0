@@ -1,7 +1,7 @@
 package com.elangzhi.ssm.controller.admin;
 
 import com.elangzhi.ssm.controller.BaseController;
-import com.elangzhi.ssm.dao.plugin.PageData;
+import com.elangzhi.ssm.tools.PageData;
 import com.elangzhi.ssm.services.AccountService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

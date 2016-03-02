@@ -2,12 +2,10 @@ package com.elangzhi.ssm.controller;
 
 
 import javax.servlet.http.HttpServletRequest;
-import com.elangzhi.ssm.dao.plugin.PageData;
-import com.elangzhi.ssm.model.base.Page;
+import com.elangzhi.ssm.tools.PageData;
 import org.apache.log4j.Logger;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.ModelAndView;
 
 
 public class BaseController {
@@ -33,15 +31,7 @@ public class BaseController {
 		return request;
 	}
 
-	
-	/**
-	 * 得到分页列表的信息 
-	 */
-	public Page getPage(){
-		
-		return new Page();
-	}
-	
+
 	public static void logBefore(Logger logger, String interfaceName){
 		logger.info("");
 		logger.info("start");
