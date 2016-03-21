@@ -10,7 +10,7 @@ import javax.annotation.Resource;
  * Created by GaoXiang on 2016/3/2 0002.
  */
 @Repository
-public class LzDao {
+public class LzDao<T> {
 
     @Resource
     private SqlSessionTemplate sqlSessionTemplate;
@@ -26,18 +26,16 @@ public class LzDao {
         return sqlSessionTemplate.insert(str, obj);
     }
 
-
     /**
-     * 查找对象
+     * 删除对象
      * @param str
      * @param obj
      * @return
      * @throws Exception
      */
-    public <T> T selectOne(String str, Object obj) throws Exception {
-        return sqlSessionTemplate.selectOne(str, obj);
+    public Integer delete(String str, Object obj) throws Exception {
+        return sqlSessionTemplate.delete(str, obj);
     }
-
 
     /**
      * 修改对象
@@ -51,14 +49,14 @@ public class LzDao {
     }
 
     /**
-     * 删除对象
+     * 查找对象
      * @param str
      * @param obj
      * @return
      * @throws Exception
      */
-    public Integer delete(String str, Object obj) throws Exception {
-        return sqlSessionTemplate.delete(str, obj);
+    public T selectOne(String str, Object obj) throws Exception {
+        return sqlSessionTemplate.selectOne(str, obj);
     }
 
     /**
@@ -68,7 +66,7 @@ public class LzDao {
      * @return
      * @throws Exception
      */
-    public PageInfo list(String str, Object obj) throws Exception {
+    public PageInfo<T> list(String str, Object obj) throws Exception {
         return new PageInfo(sqlSessionTemplate.selectList(str, obj));
     }
 
@@ -79,7 +77,7 @@ public class LzDao {
      * @return
      * @throws Exception
      */
-    public PageInfo list(String str, Object obj, RowBounds rowBounds) throws Exception {
+    public PageInfo<T> list(String str, Object obj, RowBounds rowBounds) throws Exception {
         return new PageInfo(sqlSessionTemplate.selectList(str, obj,rowBounds));
     }
 }
